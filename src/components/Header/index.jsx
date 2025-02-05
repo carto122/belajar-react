@@ -1,5 +1,10 @@
 import { Link } from "react-router-dom";
 import Search from "../Search";
+import { IconButton, Badge, Tooltip } from "@mui/material";
+import SyncIcon from "@mui/icons-material/Sync";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import Navigation from "../Navigation";
 
 const Header = () => {
   return (
@@ -42,24 +47,59 @@ const Header = () => {
           <div className="col w-[40%]">
             <Search />
           </div>
-          <div className="col w-[30%]">
+          <div className="col w-[30%] flex items-center pl-7">
             <div className="flex items-center justify-end gap-3 w-full">
-              <Link
-                className="transition text-[15px] font-[500] hover:text-[#ff5252]"
-                to={"/login"}
-              >
-                Masuk
-              </Link>
-              <Link
-                className="transition text-[15px] font-[500] hover:text-[#ff5252]"
-                to={"/register"}
-              >
-                Registrasi
-              </Link>
+              <li className="list-none">
+                <Link
+                  className="transition text-[15px] font-[500] hover:text-[#ff5252]"
+                  to={"/login"}
+                >
+                  Masuk
+                </Link>
+                &nbsp;&nbsp;
+                <Link
+                  className="transition text-[15px] font-[500] hover:text-[#ff5252]"
+                  to={"/register"}
+                >
+                  Registrasi
+                </Link>
+              </li>
+
+              <li className="list-none">
+                <Tooltip title="compare">
+                  <IconButton aria-label="compare">
+                    <Badge badgeContent={4} color="secondary">
+                      <SyncIcon className="hover:text-[#ff5252] transition"></SyncIcon>
+                    </Badge>
+                  </IconButton>
+                </Tooltip>
+              </li>
+
+              <li className="list-none">
+                <Tooltip title="Wish List">
+                  <IconButton aria-label="wishlist">
+                    <Badge badgeContent={4} color="secondary">
+                      <FavoriteBorderIcon className="hover:text-[#ff5252] transition"></FavoriteBorderIcon>
+                    </Badge>
+                  </IconButton>
+                </Tooltip>
+              </li>
+
+              <li className="list-none">
+                <Tooltip title="Cart">
+                  <IconButton aria-label="cart">
+                    <Badge badgeContent={4} color="secondary">
+                      <ShoppingCartIcon className="hover:text-[#ff5252] transition"></ShoppingCartIcon>
+                    </Badge>
+                  </IconButton>
+                </Tooltip>
+              </li>
             </div>
           </div>
         </div>
       </div>
+
+      <Navigation />
     </header>
   );
 };
