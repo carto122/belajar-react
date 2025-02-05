@@ -1,18 +1,12 @@
 import "./App.css";
+import { BrowserRouter } from "react-router-dom";
+import Header from "./components/Header";
 
 function App() {
   return (
-    <>
-      <div className="container card">
-        <h1>Belajar ReactJS</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-          fuga consectetur laudantium odio possimus magnam neque laborum ipsa
-          vel perferendis quo dolorum voluptatem repellat ipsum libero,
-          dignissimos expedita unde in!
-        </p>
-      </div>
-    </>
+    <BrowserRouter>
+      <Header />
+    </BrowserRouter>
   );
 }
 
