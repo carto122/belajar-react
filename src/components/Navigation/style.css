@@ -1,0 +1,7 @@
+.categoryPanel button {
+  text-transform: capitalize !important;
+}
+.categoryPanel .submenu,
+.inner_submenu {
+  display: none;
+}
