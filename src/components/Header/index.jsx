@@ -37,7 +37,7 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="haeder py-3">
+      <div className="haeder py-3 border-b-[1px] border-gray-200">
         <div className="container flex items-center justify-between">
           <div className="col w-[30%]">
             <Link to={"/"}>

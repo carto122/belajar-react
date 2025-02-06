@@ -61,20 +61,36 @@ const CategoryPanel = ({ isOpenCatPanel, setIsOpenCatPanel }) => {
       ],
     },
     {
-      name: "TAS",
-      link: "/",
-    },
-    {
       name: "MAKANAN",
       link: "/",
+      subcategories: [
+        {
+          name: "SeaFood",
+          link: "/",
+          innerSubcategories: [
+            { name: "IKan Bandeng", link: "/" },
+            { name: "Ikan Lele", link: "/" },
+            { name: "Lopster", link: "/" },
+            { name: "Endog", link: "/" },
+          ],
+        },
+      ],
     },
     {
       name: "SAYURAN",
       link: "/",
-    },
-    {
-      name: "KECANTIKAN",
-      link: "/",
+      subcategories: [
+        {
+          name: "Buah & sayuran",
+          link: "/",
+          innerSubcategories: [
+            { name: "Apel", link: "/" },
+            { name: "Kol", link: "/" },
+            { name: "Jeruk", link: "/" },
+            { name: "endog", link: "/" },
+          ],
+        },
+      ],
     },
     {
       name: "KESEHATAN",

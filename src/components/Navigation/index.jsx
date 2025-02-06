@@ -18,7 +18,6 @@ const Navigation = () => {
     <>
       <nav className="py-2">
         <div className="container flex items-center justify-end gap-8">
-          {/* Menu Kategori */}
           <div className="col_1 w-[30%]">
             <Button
               className="!text-[rgba(0,0,0,0.8)] gap-2 w-full !font-bold"
@@ -30,56 +29,82 @@ const Navigation = () => {
             </Button>
           </div>
 
-          {/* Menu Navigasi */}
           <div className="col_1 w-[65%]">
             <ul className="flex items-center gap-3 !font-bold">
-              {[
-                "Home",
-                "Fashion",
-                "Elektronik",
-                "Tas",
-                "Makanan",
-                "Sayuran",
-                "Kecantikan",
-                "Kesehatan",
-              ].map((menu, index) => (
-                <li key={index} className="list-none relative">
-                  <Link
-                    to="/"
-                    className="link transition text-[14px] font-[500]"
-                  >
-                    <Button className="link transition !text-[rgba(0,0,0,0.8)] hover:!text-[#ff5252]">
-                      {menu}
-                    </Button>
-                  </Link>
+              <li className="relative list-none">
+                <Link to="/" className="link transition text-[14px] font-[500]">
+                  <Button className="link transition !text-[rgba(0,0,0,0.8)] hover:!text-[#ff5252]">
+                    Home
+                  </Button>
+                </Link>
+              </li>
+              <li className="relative list-none">
+                <Link to="/" className="link transition text-[14px] font-[500]">
+                  <Button className="link transition !text-[rgba(0,0,0,0.8)] hover:!text-[#ff5252]">
+                    Fashion
+                  </Button>
 
-                  {/* Submenu untuk Fashion */}
-                  {menu === "Fashion" && (
-                    <div className="submenu absolute top-[100%] left-[0%] min-w-[300px] bg-white shadow-md">
-                      <ul>
-                        {[
-                          "FASHION PRIA",
-                          "FASHION WANITA",
-                          "FASHION ANAK",
-                          "FASHION BAYI",
-                        ].map((subMenu, subIndex) => (
-                          <li key={subIndex} className="list-none w-full">
-                            <button className="w-full text-left px-4 py-2 transition hover:bg-gray-100 !text-[rgba(0,0,0,0.8)]">
-                              {subMenu}
-                            </button>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-                </li>
-              ))}
+                  <div className="submenu absolute top-[120%] left-[0%] min-w-[200px] bg-white shadow-md transition-all">
+                    <ul>
+                      <li className="relative list-none w-full text-[12px]">
+                        <Link to="/" className="w-full">
+                          <button className="w-full cursor-pointer text-left px-2 py-2 transition hover:bg-gray-100 !text-[rgba(0,0,0,0.8)]">
+                            Fashion Pria
+                          </button>
+                        </Link>
+                      </li>
+                      <li className="relative list-none w-full text-[12px]">
+                        <Link to="/" className="w-full">
+                          <button className="w-full cursor-pointer text-left px-2 py-2 transition hover:bg-gray-100 !text-[rgba(0,0,0,0.8)]">
+                            Fashion Wanita
+                          </button>
+                        </Link>
+                      </li>
+                      <li className="relative list-none w-full text-[12px]">
+                        <Link to="/" className="w-full ">
+                          <button className="w-full cursor-pointer text-left px-2 py-2 transition hover:bg-gray-100 !text-[rgba(0,0,0,0.8)]">
+                            Fashion Anak
+                          </button>
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                </Link>
+              </li>
+              <li className="relative list-none">
+                <Link to="/" className="link transition text-[14px] font-[500]">
+                  <Button className="link transition !text-[rgba(0,0,0,0.8)] hover:!text-[#ff5252]">
+                    Elektronik
+                  </Button>
+                </Link>
+              </li>
+              <li className="relative list-none">
+                <Link to="/" className="link transition text-[14px] font-[500]">
+                  <Button className="link transition !text-[rgba(0,0,0,0.8)] hover:!text-[#ff5252]">
+                    Makanan
+                  </Button>
+                </Link>
+              </li>
+              <li className="relative list-none">
+                <Link to="/" className="link transition text-[14px] font-[500]">
+                  <Button className="link transition !text-[rgba(0,0,0,0.8)] hover:!text-[#ff5252]">
+                    Sayuran
+                  </Button>
+                </Link>
+              </li>
+              <li className="relative list-none">
+                <Link to="/" className="link transition text-[14px] font-[500]">
+                  <Button className="link transition !text-[rgba(0,0,0,0.8)] hover:!text-[#ff5252]">
+                    Kesehatan
+                  </Button>
+                </Link>
+              </li>
             </ul>
           </div>
 
           {/* Info Gratis Ongkir */}
           <div className="col_1 w-[15%]">
-            <p className="flex items-center gap-1 text-[13px] font-[500]">
+            <p className="flex items-center gap-1 text-[14px] font-[500]">
               <FaTruckFast />
               Gratis Ongkir
             </p>
