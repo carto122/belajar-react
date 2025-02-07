@@ -36,6 +36,14 @@ const Navigation = () => {
 
           <div className="col_1 w-[65%]">
             <ul className="flex items-center gap-3 !font-bold">
+              <li className="relative list-none">
+                <Link to="/" className="link transition text-[14px] font-[500]">
+                  <Button className="link transition !text-[rgba(0,0,0,0.8)] hover:!text-[#ff5252]">
+                    Home
+                  </Button>
+                </Link>
+              </li>
+
               <li
                 className="relative list-none"
                 onMouseEnter={() => handleMouseEnter("fashion")}
@@ -86,6 +94,20 @@ const Navigation = () => {
                 <Link to="/" className="link transition text-[14px] font-[500]">
                   <Button className="link transition !text-[rgba(0,0,0,0.8)] hover:!text-[#ff5252]">
                     Makanan
+                  </Button>
+                </Link>
+              </li>
+              <li className="relative list-none">
+                <Link to="/" className="link transition text-[14px] font-[500]">
+                  <Button className="link transition !text-[rgba(0,0,0,0.8)] hover:!text-[#ff5252]">
+                    Sayuran
+                  </Button>
+                </Link>
+              </li>
+              <li className="relative list-none">
+                <Link to="/" className="link transition text-[14px] font-[500]">
+                  <Button className="link transition !text-[rgba(0,0,0,0.8)] hover:!text-[#ff5252]">
+                    Kesehatan
                   </Button>
                 </Link>
               </li>

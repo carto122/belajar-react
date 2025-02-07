@@ -133,13 +133,21 @@ const CategoryPanel = ({ isOpenCatPanel, setIsOpenCatPanel }) => {
       link: "/",
       subcategories: [
         {
-          name: "SeaFood",
+          name: "Makanan Pokok",
           link: "/",
           innerSubcategories: [
-            { name: "IKan Bandeng", link: "/" },
-            { name: "Ikan Lele", link: "/" },
-            { name: "Lopster", link: "/" },
-            { name: "Endog", link: "/" },
+            { name: "Beras", link: "/" },
+            { name: "Gandum", link: "/" },
+            { name: "Jagung", link: "/" },
+          ],
+        },
+        {
+          name: "Makanan Utama",
+          link: "/",
+          innerSubcategories: [
+            { name: "Daging", link: "/" },
+            { name: "Seafood", link: "/" },
+            { name: "Susu & Keju", link: "/" },
           ],
         },
       ],
@@ -213,6 +221,36 @@ const CategoryPanel = ({ isOpenCatPanel, setIsOpenCatPanel }) => {
     {
       name: "KESEHATAN",
       link: "/",
+      subcategories: [
+        {
+          name: "Suplemen & Vitamin",
+          link: "/",
+          innerSubcategories: [
+            { name: "Multivitamin", link: "/" },
+            { name: "Mineral", link: "/" },
+            { name: "Suplemen Herbal", link: "/" },
+            { name: "Probiotik & Prebiotik", link: "/" },
+          ],
+        },
+        {
+          name: "Alat Kesehatan",
+          link: "/",
+          innerSubcategories: [
+            { name: "Ukur Kesehatan", link: "/" },
+            { name: "Alat Bantu Medis", link: "/" },
+            { name: "Alat Terapi", link: "/" },
+            { name: "Alat Tes Medis", link: "/" },
+          ],
+        },
+        {
+          name: "Kesehatan KUlit & Tubuh",
+          link: "/",
+          innerSubcategories: [
+            { name: "Kulit", link: "/" },
+            { name: "Rambut", link: "/" },
+          ],
+        },
+      ],
     },
   ];
 
